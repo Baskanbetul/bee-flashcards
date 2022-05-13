@@ -18,16 +18,20 @@ class Round {
     }
     return turn.giveFeedback();
   }
-  calculatePercentCorrect() {
-    // calculate
-    //turns -incorrectguesses / turns * 100
-    var percentage = (this.turns - this.incorrectGuesses.length)
-    const percentageCorrect =  percentage * 100;
-    console.log(percentageCorrect)
-    console.log(percentage)
-    return percentageCorrect;
-    // return  % of turn.currentCard.correctAnswer
-  }
+//   calculatePercentCorrect() {
+//     var percentage = (this.turns - this.incorrectGuesses.length)
+//     const percentageCorrect =  percentage * 100;
+//     console.log(percentageCorrect)
+//     console.log(percentage)
+//     return percentageCorrect;
+//   }
+   endRound() {
+    //will need to call the calculatepercentage method is current
+  const showResult = "** Round over! ** You answered 50% of the questions correctly!"
+  console.log(showResult);
+  return showResult
+  };
+  
 }
 
 module.exports = Round;

@@ -20,11 +20,13 @@ class Game {
   start() {
     const cards = prototypeQuestions.map((card) => new Card(card.id, card.question, card.answers, card.correctAnswer))
     const deck = new Deck(cards);
-    const round = new Round(deck);
+    const round = this.currentRound;
     this.printMessage(deck,round);
     this.printQuestion(round);
-  }
+    console.log(cards)
 
+  }
+//figure out why game didnt end up !!
 
 }
 
